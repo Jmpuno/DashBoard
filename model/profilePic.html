@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Profile Picture</h2>
+
+        <form id="uploadForm" action="../control/upload.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="studentId" id="studentId" value="">
+            <input type="file" name="profilePic" id="profilePic" accept="image/*">
+            <button type="submit">upload</button>
+        </form>
+
+        <h3>Profile:</h3>
+        <div class="pic-cont">
+            <img id="picture" src="pictures/default.png" alt="Profile Image" style="height: 200px; width: 200px; border-radius: 50%;">
+
+        </div>
+       
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>

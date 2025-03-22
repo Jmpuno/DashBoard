@@ -1,0 +1,16 @@
+.form-cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border: solid 1px red;
+    text-align: center;
+
+}
+.inputCont{
+    
+    flex-grow: 1;
+}
+.in{
+    width: 90%;
+}

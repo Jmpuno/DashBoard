@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regirtrationStyle.css">
+    <title>School Registration Form</title>
+</head>
+<body>
+    
+        <div id="form-cont" class="form-cont">
+
+            <h1 class="title">Student Information Form</h1>
+
+
+            
+            <form action="../control/studentInfo.php" method="post" class="form-info-cont">
+                <label for="std-Id">Student Id:</label> <input type="text" name="std-Id" id="std-Id" class="placeholder" placeholder="Enter 10 digits | e.g. 2023378556" pattern="[0-9]{10}" maxlength="10" required>
+                <label for="fName">First Name:</label> <input type="text" name="fName" id="fName" class="placeholder" placeholder="e.g. Justine Matthew"   required>
+                <label for="lName">Last Name:</label> <input type="text" name="lName" id="lName" class="placeholder" placeholder="e.g. Puno" required>
+                <label for="course">Course: </label> <select name="course" id="course" class="placeholder" required>
+                    <option>BSCS</option>
+                    <option>BSIT</option>
+                    <option>BSCPE</option>
+                </select>
+                
+                <label for="hAdd">Home Address: </label> <textarea name="hAdd" id="hAdd" class="placeholder" placeholder="e.g. Toclong 2B, Imus, Cavite"></textarea required>
+              
+                <label for="cNum">Contact Number:</label> <input type="number" name="cNum" id="cNum" class="placeholder" placeholder="e.g. 09950277842">
+                <label  for="bDay">Birthday:</label> <input type="date" name="bDay" id="bDay" class="placeholder" required>
+                <label  for="sex">Sex: </label> <select name="sex" id="sex" class="placeholder" required>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <label for="pName">Parent(guardian) Name:</label> <input type="text" name="pName" id="pName" class="placeholder" placeholder="e.g. Christine Puno" required>
+                <label for="pCNum">Parent(guardian) Contact Num:</label> <input type="text" name="pCNum" id="pCNum" class="placeholder" placeholder="Enter parent contact num" required>
+
+                <label for="uPass">Password:</label> <input type="password" name="uPass" id="uPass" class="placeholder" placeholder="e.g. *********" required>
+                <label for="uCPass">Confirm Password:</label> <input type="password" name="uCPass" id="uCPass" class="placeholder" placeholder="e.g. ********* " required>
+
+
+                <button type="submit" class="submit-btn">SUBMIT</button><br><br>
+
+                <a href="loginPage.html">login account</a>
+            </form>
+        </div>
+</body>
+</html>
