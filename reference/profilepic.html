@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Upload</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link your CSS file -->
+</head>
+
+<body>
+    <div class="container">
+        <h2>Upload Profile Picture</h2>
+        
+        <form id="uploadForm" action="../reference/upload.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="student_id" id="student_id">
+            <input type="file" name="profilePic" id="profilePic" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <h3>Current Profile Picture</h3>
+        <div id="profilePicContainer">
+            <img id="profileImage" src="pictures/default.png" alt="Profile Picture" style="width:150px; height:150px; border-radius:50%;">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch last student ID
+            fetch("getLastStudentId.php")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.student_id) {
+                        document.getElementById("student_id").value = data.student_id;
+                    }
+                });
+           
+            // Fetch Profile Picture
+            fetch("getProfilePic.php")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.profilePic) {
+                        document.getElementById("profileImage").src = data.profilePic;
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
