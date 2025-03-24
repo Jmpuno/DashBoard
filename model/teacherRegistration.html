@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="form-cont" class="form-cont">
+
+        <h1 class="title">Teacher Registration</h1>
+
+
+        
+        <form action="../control/studentInfo.php" method="post" class="form-info-cont">
+            <label for="teacher-Id">Teacher Id:</label> <input type="text" name="teacher-Id" id="teacher-Id" class="placeholder" placeholder="Enter 10 digits | e.g. 2023378556" pattern="[0-9]{10}" maxlength="10" required>
+            <label for="fName">First Name:</label> <input type="text" name="fName" id="fName" class="placeholder" placeholder="e.g. Justine Matthew"   required>
+            <label for="lName">Last Name:</label> <input type="text" name="lName" id="lName" class="placeholder" placeholder="e.g. Puno" required>
+            <label for="department">Course: </label> <select name="department" id="department" class="placeholder" required>
+                <option>COI</option>
+                <option>CBAA</option>
+                <option>COC</option>
+            </select>
+            
+            <label for="hAdd">Home Address: </label> <textarea name="hAdd" id="hAdd" class="placeholder" placeholder="e.g. Toclong 2B, Imus, Cavite"></textarea required>
+          
+            <label for="email">Email:</label> <input type="number" name="email" id="email" class="placeholder" placeholder="e.g. teacher123@gmail.com">
+            <label  for="sex">Sex: </label> <select name="sex" id="sex" class="placeholder" required>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <label for="uPass">Password:</label> <input type="password" name="uPass" id="uPass" class="placeholder" placeholder="e.g. *********" required>
+            <label for="uCPass">Confirm Password:</label> <input type="password" name="uCPass" id="uCPass" class="placeholder" placeholder="e.g. ********* " required>
+
+
+            <button type="submit" class="submit-btn">SUBMIT</button><br><br>
+
+            <a href="loginPage.html">login account</a>
+        </form>
+    </div>
+</body>
+</html>
